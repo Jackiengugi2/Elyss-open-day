@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Elyss School Open Day · Register Your Visit · Lusigetti Campus</title>
-<meta name="description" content="Elyss School Open Day, Lusigetti Campus, 21 to 30 October. Walk the classrooms, meet the teachers and leave with your fee breakdown. Free, no obligation. Register your slot.">
+<meta name="description" content="Elyss School Open Day, Lusigetti Campus, Saturday 14 November. Walk the classrooms, meet the teachers and leave with your fee breakdown. Free, no obligation. Register your slot.">
 <meta property="og:title" content="Elyss School Open Day · Register your slot">
-<meta property="og:description" content="This Mashujaa season, come and see the firm foundation your child will build on. Free Open Day, Lusigetti Campus, 21 to 30 October.">
+<meta property="og:description" content="This Mashujaa season, come and see the firm foundation your child will build on. Free Open Day, Lusigetti Campus, Saturday 14 November.">
 <meta property="og:image" content="images/mashujaa-poster.jpg">
 <meta name="theme-color" content="#1D3A70">
 <link rel="icon" href="images/logo.png">
@@ -28,6 +28,8 @@
   .blocks i { width: 18px; height: 18px; background: #E31E24; }
   .blocks i:nth-child(2) { background: #F08A1D; } .blocks i:nth-child(3) { background: #EDB52D; }
   .blocks i:nth-child(4) { background: #6BB843; } .blocks i:nth-child(5) { background: #0E9BD8; }
+  .label-like { display: block; font-weight: 800; font-size: .92rem; color: var(--brand-ink); margin-bottom: 6px; }
+  .fixed-date { margin: 0; min-height: 48px; display: flex; align-items: center; padding: 0 .9em; border-radius: 14px; background: var(--soft); font-weight: 800; color: var(--brand); }
   .blocks.sm i { width: 11px; height: 11px; gap: 4px; }
   .hero h1 { text-transform: uppercase; color: var(--brand); font-size: clamp(2.4rem, 6.4vw, 4.3rem); line-height: 1; }
   .hero h1 small { display: block; font-size: .36em; letter-spacing: .35em; color: #0E9BD8; margin-bottom: .5em; }
@@ -55,7 +57,7 @@
     formEndpoint: "",          // optional: also copy each registration to a Google Sheet / Privyr webhook (Netlify Forms already stores them)
     metaPixelId: "",           // paste the Elyss Meta Pixel ID here (same ID on both pages)
     thankYouUrl: "thank-you.html",
-    campaign: "ELYSS_OPENDAY_LUSIGETTI_OCT26"
+    campaign: "ELYSS_LEAD_LP_OpenDay_PROS_OCT26"
   };
 </script>
 </head>
@@ -82,7 +84,7 @@
         <h1 style="margin-top:1rem"><small>Open Day</small>Come and see the foundation.</h1>
         <p class="lead">This Mashujaa season we honour the heroes who laid Kenya’s foundation, and open our doors to the families raising the next generation. Walk the classrooms, meet the teachers and leave with your fee breakdown in hand.</p>
         <ul class="od-facts">
-          <li><b>21 – 30 October</b>Weekdays &amp; Saturday</li>
+          <li><b>Sat 14 November</b>Morning &amp; afternoon</li>
           <li><b>Lusigetti Campus</b>Kikuyu</li>
           <li><b>Free</b>No obligation</li>
         </ul>
@@ -104,7 +106,7 @@
       <div class="register-aside">
         <span class="eyebrow">Register your slot</span>
         <h2>One visit is enough to decide.</h2>
-        <p class="lead">Pick a day and time that suits you. We’ll confirm your slot by phone or WhatsApp.</p>
+        <p class="lead">Pick a morning or afternoon slot on Saturday 14 November. We’ll confirm your slot by phone or WhatsApp.</p>
         <ul class="assure">
           <li><span class="ic">🏫</span><div><b>See real classrooms</b>Walk through the school during a normal learning day.</div></li>
           <li><span class="ic">📄</span><div><b>Leave with your fees</b>A clear breakdown for your child’s class, and your transport route.</div></li>
@@ -142,20 +144,9 @@
               <div class="err">Please check your email address.</div>
             </div>
             <div class="field">
-              <label for="visit_date">Open Day date *</label>
-              <select id="visit_date" name="visit_date" required data-summary="Open Day date">
-                <option value="">Choose a day</option>
-                <option value="2026-10-21">Wed 21 Oct</option>
-                <option value="2026-10-22">Thu 22 Oct</option>
-                <option value="2026-10-23">Fri 23 Oct</option>
-                <option value="2026-10-24">Sat 24 Oct</option>
-                <option value="2026-10-26">Mon 26 Oct</option>
-                <option value="2026-10-27">Tue 27 Oct</option>
-                <option value="2026-10-28">Wed 28 Oct</option>
-                <option value="2026-10-29">Thu 29 Oct</option>
-                <option value="2026-10-30">Fri 30 Oct</option>
-              </select>
-              <div class="err">Please choose a day.</div>
+              <span class="label-like">Open Day date</span>
+              <p class="fixed-date">Saturday 14 November 2026</p>
+              <input type="hidden" name="visit_date" value="2026-11-14" data-summary="Open Day date">
             </div>
             <fieldset class="field">
               <legend>Time *</legend>
@@ -237,9 +228,9 @@
     <div class="wrap">
       <div class="center"><span class="eyebrow">Three steps</span><h2>From registration to your visit</h2></div>
       <div class="steps next-steps">
-        <div class="step"><span class="time">Today</span><h3>Register</h3><p>Choose a day and time in the form above.</p></div>
+        <div class="step"><span class="time">Today</span><h3>Register</h3><p>Choose a morning or afternoon slot in the form above.</p></div>
         <div class="step"><span class="time">Same day</span><h3>We confirm</h3><p>We call or WhatsApp you to confirm your slot and share directions.</p></div>
-        <div class="step"><span class="time">Open Day</span><h3>Come and see</h3><p>Tour the school, meet the teachers and get your fee breakdown.</p></div>
+        <div class="step"><span class="time">Sat 14 November</span><h3>Come and see</h3><p>Tour the school, meet the teachers and get your fee breakdown.</p></div>
       </div>
     </div>
   </section>
@@ -252,7 +243,7 @@
         <details><summary>Does Open Day cost anything?</summary><p>No. Open Day is free, and there is no obligation to enrol.</p></details>
         <details><summary>Can I bring my child?</summary><p>Yes, please do. Tell us how many people are coming so we can prepare.</p></details>
         <details><summary>Where is the Lusigetti Campus?</summary><p>In Kikuyu, Kiambu County. We send directions when we confirm your slot, or call <a data-contact="tel"></a> for help finding us.</p></details>
-        <details><summary>What if none of the dates suit me?</summary><p>Register anyway and say so in the questions box. We’ll arrange a private visit on a day that works for you.</p></details>
+        <details><summary>What if I can’t make 14 November?</summary><p>Register anyway and say so in the questions box. We’ll arrange a private visit on a day that works for you.</p></details>
       </div>
     </div>
   </section>

@@ -27,6 +27,6 @@ filled from these and hidden while empty, so the page never shows a dead link.
 
 ## Confirm before publishing
 
-Open Day dates (21–30 Oct, skipping Mashujaa Day on 20 Oct and Sunday 25 Oct) come from the planning sheet's recommended window, not a confirmed school date. Edit the `visit_date` options in `index.html` once confirmed. Times are offered as Morning/Afternoon only.
+Open Day is **Saturday 14 November 2026** (confirmed). The date is a hidden `visit_date` field in the form; times are offered as Morning/Afternoon only. The campus (Lusigetti) is still to be confirmed.
 
 Local preview: `python3 -m http.server 8080` (form submissions only work on Netlify).
