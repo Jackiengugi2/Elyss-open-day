@@ -1,32 +1,37 @@
-# Elyss School Open Day — Landing Page
+# Elyss School — Meta Ads Landing Page
 
-Mashujaa Day campaign landing page (`index.html`) and post-registration page
-(`thank-you.html`). Static HTML/CSS/JS, no build step; deploys to Netlify as-is.
+Form-first landing page for Meta ads: logo header, a one-line headline, then the form.
+`thank-you.html` is shown after submitting and fires the Meta Pixel `Lead` event.
+Static HTML/CSS/JS, no build step.
 
 ```
 index.html          landing page + Netlify form "elyss-open-day"
-thank-you.html      shown after submitting (fires the Meta Pixel Lead event)
-assets/landing.css  shared styles (palette tokens live in each page's <style> block)
+thank-you.html      post-submit page with WhatsApp hand-off
+assets/landing.css  shared styles (school palette lives in each page's <style> block)
 assets/landing.js   validation, Netlify submission, WhatsApp hand-off, Pixel, UTM capture
-images/             logo and Mashujaa artwork cropped from the school's poster
+images/logo.png     school logo
 netlify.toml        publish settings
 ```
 
-## Deploying on Netlify
-
-1. Netlify → **Add new site → Import an existing project → GitHub** → pick this repo
-   and the branch holding this code. Build command: *(empty)*. Publish directory: `.`
-2. **Site configuration → Forms → Enable form detection**, then **Deploys → Trigger deploy**.
-3. Check **Forms** lists `elyss-open-day`, and add an email notification for the admissions team.
-
 ## Settings (`window.LANDING`, top of both pages)
 
-`phone`, `whatsapp` (international format, e.g. 2547XXXXXXXX), `waIntro`, `metaPixelId`,
-`formEndpoint` (optional extra webhook), `campaign`. Elements marked `data-contact` are
-filled from these and hidden while empty, so the page never shows a dead link.
+| Key | Value |
+|---|---|
+| `phone` / `whatsapp` | 0711 650 405 / 254711650405 |
+| `campaign` | `ELYSS_LEAD_LP_OpenDay_PROS_OCT26` (playbook naming: CLIENT_OBJ_DEST_SEGMENT_LAYER_MMMYY) |
+| `metaPixelId` | empty: add the Pixel ID on both pages |
+| `formEndpoint` | optional extra webhook (Privyr / Google Sheet) |
 
-## Confirm before publishing
+Ad links should carry `utm_source=meta&utm_campaign=<Ads Manager name>`; the form saves
+every `utm_*` value and `fbclid` with the enquiry.
 
-Open Day is **Saturday 14 November 2026** (confirmed). The date is a hidden `visit_date` field in the form; times are offered as Morning/Afternoon only. The campus (Lusigetti) is still to be confirmed.
+## Netlify
+
+Publish directory `.`, no build command. Enable **Forms** and check `elyss-open-day` is listed;
+add an email notification under **Forms → Form notifications**.
+
+## Notes
+
+Open Day is Saturday 14 November 2026 (hidden `visit_date` field). Campus is not shown on the page until the school confirms it.
 
 Local preview: `python3 -m http.server 8080` (form submissions only work on Netlify).

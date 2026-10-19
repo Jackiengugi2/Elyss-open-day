@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>You’re Registered · Elyss School Open Day</title>
+<title>Thank You · Elyss School</title>
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#1D3A70">
 <link rel="icon" href="images/logo.png">
@@ -12,115 +12,60 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/landing.css">
 <style>
-  /* Elyss palette, taken from the school logo and Mashujaa Day artwork. */
   :root {
     --brand: #1D3A70; --brand-ink: #152B55; --on-brand: #fff;
     --accent: #EDB52D; --accent-ink: #0B7FB5; --on-accent: #152B55;
-    --soft: #EEF5FC; --hero-bg: linear-gradient(180deg, #EAF3FC 0, #fff 70%); --mash-bg: #fff;
+    --soft: #EEF5FC; --hero-bg: linear-gradient(180deg, #EAF3FC 0, #F7FAFE 100%);
     --text: #1b2540; --muted: #4a5675; --foot-bg: #1D3A70;
+    --brandbar: linear-gradient(90deg, #E31E24 0 20%, #F08A1D 20% 40%, #EDB52D 40% 60%, #6BB843 60% 80%, #0E9BD8 80%);
     --font-head: "Montserrat", system-ui, sans-serif; --font-body: "Montserrat", system-ui, sans-serif;
   }
-  h1, h2 { font-weight: 900; letter-spacing: -.015em; }
-  .blocks { display: flex; gap: 6px; }
-  .blocks i { width: 18px; height: 18px; background: #E31E24; }
-  .blocks i:nth-child(2) { background: #F08A1D; } .blocks i:nth-child(3) { background: #EDB52D; }
-  .blocks i:nth-child(4) { background: #6BB843; } .blocks i:nth-child(5) { background: #0E9BD8; }
-  .blocks.sm i { width: 11px; height: 11px; gap: 4px; }
-  .hero h1 { text-transform: uppercase; color: var(--brand); font-size: clamp(2.4rem, 6.4vw, 4.3rem); line-height: 1; }
-  .hero h1 small { display: block; font-size: .36em; letter-spacing: .35em; color: #0E9BD8; margin-bottom: .5em; }
-  .od-facts { list-style: none; padding: 0; margin: 1.2rem 0 0; display: grid; grid-template-columns: repeat(3, auto); gap: 10px 28px; justify-content: start; }
-  .od-facts li { font-weight: 600; color: var(--muted); font-size: .92rem; }
-  .od-facts b { display: block; color: var(--brand); font-size: 1.05rem; }
-  .hero-photo { position: relative; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); }
-  .hero-photo img { width: 100%; }
-  .hero-photo::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 10px;
-    background: linear-gradient(90deg, #E31E24 0 20%, #F08A1D 20% 40%, #EDB52D 40% 60%, #6BB843 60% 80%, #0E9BD8 80%); }
-  .hero-photo figcaption { position: absolute; left: 16px; bottom: 26px; right: 16px; color: #fff; font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,.6); }
-  .values { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 2.2rem; }
-  .value { background: #fff; border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); border-top: 6px solid var(--c); }
-  .value p { margin: 0; color: var(--muted); font-size: .95rem; }
-  .foot-strip { background: var(--brand); color: #fff; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; padding: 16px; font-weight: 800; letter-spacing: .25em; text-transform: uppercase; font-size: .78rem; }
-  @media (max-width: 960px) { .values { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 600px) { .values, .od-facts { grid-template-columns: 1fr; } }
+  .lp-hero h1 { font-weight: 900; color: var(--brand); }
 </style>
 <script>
   window.LANDING = {
     school: "Elyss School",
     phone: "0711 650 405",
     whatsapp: "254711650405",
-    waIntro: "Hello Elyss School, I have just registered for the Open Day on your website.",
-    formEndpoint: "",          // optional: also copy each registration to a Google Sheet / Privyr webhook (Netlify Forms already stores them)
-    metaPixelId: "",           // paste the Elyss Meta Pixel ID here (same ID on both pages)
+    waIntro: "Hello Elyss School, I have just registered for the Open Day on Saturday 14 November.",
+    formEndpoint: "",          // optional: also copy each enquiry to a Google Sheet / Privyr webhook (Netlify Forms already stores them)
+    metaPixelId: "",           // paste the school's Meta Pixel ID here (same ID on index.html and thank-you.html)
     thankYouUrl: "thank-you.html",
     campaign: "ELYSS_LEAD_LP_OpenDay_PROS_OCT26"
   };
 </script>
 </head>
-<body data-page="thanks">
+<body class="lp" data-page="thanks">
+<div class="brandbar" aria-hidden="true"></div>
 <header class="topbar">
   <div class="wrap">
     <a class="brandmark" href="index.html" aria-label="Elyss School home">
-      <img src="images/logo.png" alt="Elyss School, For a Firm Foundation" width="60" height="44">
+      <img src="images/logo.png" alt="Elyss School, For a Firm Foundation" width="66" height="48">
       <span class="name">Elyss School<small>For a Firm Foundation</small></span>
     </a>
-    <div class="top-actions">
-      <a class="top-phone" data-contact="tel"></a>
-      
-    </div>
+    <div class="top-actions"><a class="top-phone" data-contact="tel"></a></div>
   </div>
 </header>
 
 <main>
-  <section class="hero thanks-hero">
+  <section class="lp-hero thanks-hero" style="padding-bottom:clamp(40px,6vw,64px)">
     <div class="wrap">
-      <div class="tick-badge" aria-hidden="true">✓</div>
+      <div class="tick-badge" aria-hidden="true" style="margin-inline:auto">✓</div>
       <span class="eyebrow">Open Day registration received</span>
-      <h2>Thank you<span data-thanks-name></span>! Your Open Day slot is on its way.</h2>
-      <p class="lead">We’ll call or WhatsApp you to confirm your Saturday 14 November slot, and share directions to the Lusigetti Campus.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-wa" data-wa-continue href="#" target="_blank" rel="noopener">Confirm on WhatsApp</a>
+      <h1>Thank you<span data-thanks-name></span>!</h1>
+      <p>We’ll call or WhatsApp you to confirm your Open Day slot on Saturday 14 November and send directions.</p>
+      <div class="hero-ctas" style="justify-content:center">
+        <a class="btn btn-wa" data-wa-continue href="#" target="_blank" rel="noopener">Chat on WhatsApp now</a>
         <a class="btn btn-ghost" data-contact="tel">Call us</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="center"><span class="eyebrow">Before you come</span><h2>Make the most of your visit</h2></div>
-      <div class="steps next-steps">
-        <div class="step"><span class="time">Bring</span><h3>Your questions</h3><p>Fees, transport, CBE, Abacus: ask the teachers anything.</p></div>
-        <div class="step"><span class="time">Bring</span><h3>Your child</h3><p>Children are welcome to see the classrooms with you.</p></div>
-        <div class="step"><span class="time">Leave with</span><h3>Your fee breakdown</h3><p>And your transport route confirmed, if you need it.</p></div>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="foot">
-  <div class="wrap foot-grid">
-    <div>
-      <h3>Elyss School</h3>
-      <p>A Christian CBE school from Playgroup to Grade 6, plus Junior School. For a firm foundation.</p>
-    </div>
-    <div>
-      <h3>Talk to us</h3>
-      <ul>
-        <li>Call / WhatsApp: <a data-contact="tel"></a></li>
-        <li><a href="mailto:info@elyssschool.co.ke">info@elyssschool.co.ke</a></li>
-        <li><a href="https://www.facebook.com/elyss.school" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/elyss.school" target="_blank" rel="noopener">Instagram</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>Find us</h3>
-      <ul>
-        <li>Thogoto &amp; Lusigetti campuses, Kikuyu</li>
-        <li><a href="https://maps.app.goo.gl/hpA1GRRHoaXCGrRq8?g_st=aw" target="_blank" rel="noopener">Open the map pin</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="wrap small">© <span data-year></span> Elyss School · For a Firm Foundation</div>
+<footer class="foot-mini">
+  <p>Kikuyu Road, Thogoto, Kikuyu &middot; <a href="https://maps.app.goo.gl/hpA1GRRHoaXCGrRq8?g_st=aw" target="_blank" rel="noopener">Map</a></p><p><a href="mailto:info@elyssschool.co.ke">info@elyssschool.co.ke</a></p><p>Call / WhatsApp <a data-contact="tel"></a></p>
+  <p>© <span data-year></span> Elyss School &middot; For a Firm Foundation</p>
 </footer>
-<div class="foot-strip"><span>Elyss School</span><span class="blocks sm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span>For a Firm Foundation</span></div>
 
 <script src="assets/landing.js"></script>
 </body>
